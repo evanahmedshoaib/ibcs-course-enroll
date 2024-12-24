@@ -1,0 +1,133 @@
+/* Styling for the body */
+body {
+    background: linear-gradient(135deg, #ff4b5c 0%, #ffffff 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+}
+
+/* Flex container for form and icons */
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap; /* Prevents wrapping of the items */
+    width: 90%;
+    max-width: 1200px;
+}
+
+/* Form card styling */
+.form-card {
+    flex: 1;
+    min-width: 320px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for the logo */
+.logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px; /* Space below the logo */
+}
+
+.logo img {
+    max-width: 150px; /* Limit the width of the logo */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Vertical Icons Styling */
+.vertical-icons {
+    display: flex;
+    flex-direction: column;
+    position: fixed; /* Use fixed to make sure icons stay at the right side */
+    right: 20px; /* 20px from the right side */
+    top: 50%;
+    transform: translateY(-50%); /* Vertically center */
+    gap: 20px;
+}
+
+.icon-item img {
+    width: 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.icon-item img:hover {
+    transform: scale(1.2);
+}
+
+/* Styling for inputs and buttons */
+input, textarea, select {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #444;
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    box-shadow: 0 4px 12px rgba(255, 75, 92, 0.3);
+    transform: scale(1.02);
+}
+
+.btn-gradient {
+    background: linear-gradient(90deg, #ff4b5c, #ff6f61);
+    border: none;
+    padding: 12px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-gradient:hover {
+    background: linear-gradient(90deg, #ff6f61, #ff4b5c);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 75, 92, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .form-card {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    /* Make the icons stack properly on smaller screens */
+    .vertical-icons {
+        top: auto;
+        position: relative;
+        transform: translateY(0);
+        margin-top: 20px;
+        right: auto;
+        flex-direction: row;
+    }
+    /* Global font for the body */
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    /* Example for form labels and inputs */
+    label, input, select, textarea {
+        font-family: 'Roboto', sans-serif;
+    }
+}
+
